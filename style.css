@@ -163,6 +163,7 @@ section {
       #discord:after { content: ".........................."; }
       #soundcloud:after { content: "......................."; }
       #kofi:after { content: "............................"; }
+      #github:after { content: "............................"; }
     }
   }
 }
@@ -199,6 +200,7 @@ section {
       #discord:after { content: none; }
       #soundcloud:after { content: none; }
       #kofi:after { content: none; }
+      #github:after { content: none; }
 
       a {
         float: right;
