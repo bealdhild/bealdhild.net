@@ -23,14 +23,38 @@
         <p>
     </section>
     <section id="works">
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
-        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg">
+            <figcaption>the quick brown fox jumped over the lazy dog</figcaption>
+        </figure>
     </section>
     <section id="contact">
         <main>
@@ -87,5 +111,43 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     sections.forEach((section) => observer.observe(section));
+});
+
+// unscrambler
+const randomString = (text, r) => {
+    for (let i = 0; i < text.length; i++) {
+        r += text[i] === ' ' ? ' ' : String.fromCharCode((r = Math.random() * 62 | 0, r += r > 9 ? (r < 36 ? 55 : 61) : 48));
+    }
+    return r;
+};
+
+document.querySelectorAll("figure").forEach((el) => {
+    el._solved = true;
+    el.addEventListener("mouseenter", () => {
+        const caption = el.childNodes[3];
+        const content = [...caption.textContent];
+        caption.textContent = randomString(content);
+
+        let iteration = 0;
+        let ch = 0;
+        let solved = "";
+        if (el._solved) {
+            el._solved = false;
+            caption._itv = setInterval(() => {
+                if (iteration > 0) {
+                    iteration = 0;
+                    solved += content[ch];
+                    ch++;
+                }
+
+                caption.textContent = randomString(content.slice(ch), solved);
+                if (ch === content.length) {
+                    clearInterval(caption._itv);
+                    el._solved = true;
+                }
+                iteration++;
+            }, 30);
+        }
+    });
 });
 </script>
