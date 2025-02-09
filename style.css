@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
+
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Geist";
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -10;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  height: 3em;
+  background: black;
+  color: white;
+  align-content: end;
+  padding: 0.5em;
+  font-size: x-large;
+  position: fixed;
+  top: 0;
+  user-select: none;
+  width: calc(100% - 1em);
+  z-index: 10;
+
+  &>a.active {
+    font-weight: 700;
+  }
+}
+
+section {
+  height: 100%;
+}
+
+#home {
+  display: flex;
+
+  &>main {
+    flex-grow: 1;
+    margin: auto;
+    padding: 1em 0 1em 2em;
+    background: white;
+    max-width: 400px;
+    letter-spacing: -0.4em;
+
+    &>h1 {
+      margin-top: 0;
+      font-size: 6em;
+      font-weight: 900;
+      user-select: none;
+      &>span:nth-child(2) {
+        position:relative;
+        top: 0.25em;
+      }
+      &>span:nth-child(3) {
+        position:relative;
+        top: 0.5em;
+      }
+      &>span:nth-child(4) {
+        position:relative;
+        top: 1.3em;
+        left: -3.25em;
+      }
+    }
+
+    &>h2 {
+      font-family: "Geist Mono", monospace;
+      font-weight: 300;
+      letter-spacing: 0.42em;
+      position: relative;
+      top: -7em;
+      left: 4.1em;
+      line-height: 1em;
+      margin-bottom: 0;
+      &>span {
+        position: relative;
+        left: 2.2em;
+        letter-spacing: 0.27em;
+      }
+    }
+  }
+}
+
+#about {
+  background: black;
+  color: #1a1a1a;
+  font-size: 2vw;
+  text-align: justify;
+  overflow: hidden;
+  user-select: none;
+  padding-top: 96px;
+  overflow: none;
+
+  &>p {
+    margin: 0 -1em;
+  }
+  
+  & span {
+    user-select: text;
+    color: white;
+
+    &:nth-child(1):before {
+      content: "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum rhoncus ultricies tristique massa suspendisse nostra leo. Finibus morbi consectetur dapibus efficitur platea semper posuere. Malesuada ante laoreet nunc cubilia ";
+      color: #1a1a1a;
+    }
+    &:nth-child(1):after {
+      content: " nulla sollicitudin consectetur; tincidunt sit adipiscing. Leo dis felis primis semper blandit torquent mauris parturient. Pellentesque morbi pulvinar libero ante adipiscing integer facilisi. Consequat tempus fusce molestie congue commodo eleifend id, eros etiam. Phasellus mus tortor turpis sapien nunc augue! Egestas penatibus non accumsan vulputate commodo posuere. Vulputate porta ut netus tempus fusce eget felis ad. Hac elit litora himenaeos arcu mauris sed dis mus. Ullamcorper at pulvinar nibh sapien sit enim. Viverra praesent cubilia aliquam eleifend penatibus. Velit a cras vulputate finibus congue arcu. Mauris posuere euismod faucibus vehicula senectus accumsan vulputate. Massa faucibus molestie nibh cubilia blandit viverra proin elit dis. Viverra enim sociosqu pretium conubia lacus lobortis sapien vitae. Consectetur lacus augue pellentesque dictumst risus lobortis tristique convallis. Neque curabitur velit vestibulum ut imperdiet lobortis platea. Magna dignissim vel lorem integer finibus hendrerit senectus dapibus. Fusce euismod metus in viverra nascetur rutrum. Risus vivamus integer vitae in convallis nullam tellus. Ac id cras habitant varius et. Dolor sem sociosqu rutrum neque sapien auctor consequat class. Imperdiet vehicula euismod phasellus auctor litora pretium rhoncus ad. Ut nulla montes natoque curabitur rutrum. Rhoncus nascetur nascetur dignissim velit maximus laoreet euismod dolor. Venenatis ut blandit platea arcu lectus cras vehicula. Venenatis maecenas montes lacus maecenas quis nostra. Tincidunt tincidunt neque laoreet quis sem? Rhoncus libero eu arcu placerat curae. Id dictum eget consectetur montes fames vel vehicula! Velit parturient auctor sem sociosqu urna himenaeos. Pharetra ultricies quisque maecenas platea vulputate dapibus. Maximus maximus himenaeos mus ex turpis. Ante finibus amet, efficitur ligula tellus suspendisse in ipsum. Viverra dapibus platea ligula tortor eget habitant velit hendrerit neque. Ridiculus quis curae auctor luctus; nisi quam. Elementum sit rhoncus ullamcorper eu; vulputate tristique egestas nisl. Elementum tempor parturient malesuada mollis lacus condimentum; phasellus aenean. Dignissim convallis eleifend commodo suspendisse aptent per praesent placerat aenean. Pretium dignissim erat laoreet commodo nisl quis. Lectus euismod tortor cursus, lacinia egestas himenaeos venenatis. Sagittis commodo sed nibh penatibus amet ipsum nunc ac. Aliquam rhoncus hac netus nulla ac accumsan nam ex. Litora quam maecenas parturient curabitur facilisi id. Adipiscing magnis augue sem nibh senectus imperdiet eget. Torquent conubia tellus eu cras egestas aenean. Pretium pellentesque senectus conubia parturient at aenean senectus dui malesuada. Nostra ex sagittis mauris etiam aliquam dis ipsum erat. Aliquet quis at montes donec varius inceptos turpis. Habitasse bibendum fringilla habitasse accumsan posuere odio. Litora mollis mauris parturient malesuada ut per porttitor est massa. Amet habitasse amet varius tristique vitae accumsan ipsum? Id natoque neque vestibulum, massa habitant est. Maximus taciti cursus aenean facilisi netus posuere taciti taciti. Eros adipiscing ligula adipiscing cras eleifend blandit. Neque lacus congue montes habitasse et ad cubilia. Penatibus dolor sodales quam magna nisi curabitur commodo mattis. Massa class vehicula aptent quam sapien metus. Sit torquent habitant est; magna venenatis tellus blandit posuere. Hendrerit fames natoque enim ultricies sollicitudin porta etiam lobortis augue. Suspendisse malesuada netus ultrices etiam quis vulputate habitant est. Purus praesent natoque commodo non vulputate a. Commodo euismod natoque dapibus leo mattis. Commodo dui eu velit parturient dictumst per leo. Class in nullam mauris; finibus eros diam parturient est. Arcu et dictumst senectus; venenatis ac ut! Blandit arcu donec pulvinar cras lacinia ultricies nam. Litora sem facilisis sem tempus class molestie. Mus tellus elit aptent integer nulla tempus. Nibh mollis habitasse ipsum ultricies litora conubia proin. Rhoncus maximus curabitur feugiat at inceptos convallis orci. Sit nibh morbi ut, orci ex lectus congue. Neque molestie integer erat felis himenaeos sem nec ullamcorper a. Himenaeos litora in placerat faucibus magnis fermentum. Sociosqu libero erat dolor aliquam primis. Ut aliquet finibus vehicula neque in ac mi praesent. Donec adipiscing natoque vulputate, nunc felis hac in diam. Quis facilisi ultricies facilisis maximus ligula. Sagittis fringilla interdum pharetra accumsan pretium taciti arcu rutrum.";
+      color: #1a1a1a;
+    }
+  }
+}
+
+#works {
+  background: white;
+  padding: calc(96px + 2em) 2em 0 2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 40%);
+  grid-gap: 2em;
+
+  & figure {
+    margin: 0;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+#contact {
+  &>main {
+    font-family: "Geist Mono", monospace;
+    max-width: 44ch;
+    font-size: larger;
+    background: white;
+    padding: 10em 2em;
+    margin-left: 4vw;
+    margin-top: 0;
+    height: calc(100% - 20em);
+    overflow-wrap: anywhere;
+
+    &>ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      #email:after { content: "...................."; }
+      #bsky:after { content: "................."; }
+      #discord:after { content: ".........................."; }
+      #soundcloud:after { content: "......................."; }
+      #kofi:after { content: "............................"; }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #home main {
+    font-size: small;
+    width: calc(100% - 2em);
+  }
+
+  #about {
+    & span:before, & span:after {
+      content: none !important;
+    }
+
+    &>p {
+      margin: 0 1em;
+      font-size: 2.5em;
+    }
+  }
+  
+  #contact {
+    height: calc(100% - 16em);
+  }
+  #contact main {
+    padding: 4em 1em;
+    margin: 0;
+    width: calc(100% - 2em);
+    height: calc(100%);
+
+    &>ul {
+      #email:after { content: none; }
+      #bsky:after { content: none; }
+      #discord:after { content: none; }
+      #soundcloud:after { content: none; }
+      #kofi:after { content: none; }
+
+      a {
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alexandria Bealdhild</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+  </title>
+  <body>
+    <nav><a href="#home">Home</a> <a href="#about">About</a> <a href="#works">Works</a> <a href="#contact">Contact</a></nav>
+    <video autoplay muted loop>
+      <source src="background.webm" type="video/webm">
+    </video>
+    <section id="home">
+      <main>
+        <h1 aria-hidden="true"><span>Al</span><span>e</span><span>xand</span><span>andria</span></h1>
+        <h2>Alexandria <br /><span>Bealdhild</span></h2>
+      </main>
+    </section>
+    <section id="about">
+        <p>
+            <span>Alexandria Bealdhild is an artist</span>
+        <p>
+    </section>
+    <section id="works">
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+        <figure><img src="https://i1.sndcdn.com/avatars-kvX587L6rJFoZDjD-QHIiSg-t500x500.jpg"></figure>
+    </section>
+    <section id="contact">
+        <main>
+            <p>
+                ALEXANDRIA BEALDHILD<br />
+                /æləkˈzændɹi.ə ˈbæːθɪld/<br />
+                bealdhild.net
+            </p>
+            <ul>
+                <li><span id="email">Email</span><a href="mailto:alex@bealdhild.net">alex@bealdhild.net</a></li>
+                <li><span id="bsky">Bluesky</span><a href="https://bsky.app/profile/clowns.bsky.social">@clowns.bsky.social</a></li>
+                <li><span id="discord">Discord</span><a>clowngirls</a></li>
+                <li><span id="soundcloud">SoundCloud</span><a href="https://soundcloud.com/weirdbloom">weirdbloom</a></li>
+                <li><span id="kofi">Ko-fi</span><a href="https://ko-fi.com/alxbldhld">alexbldhld</a></li>
+            </ul>
+        </main>
+    </section>
+  </body>
+</html>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // remove active class from all links
+                    navLinks.forEach((link) => link.classList.remove("active"));
+                    
+                    // find the corresponding nav link
+                    const targetLink = document.querySelector(
+                        `nav a[href="#${entry.target.id}"]`
+                    );
+                    
+                    if (targetLink) targetLink.classList.add("active");
+                }
+            });
+        },
+        { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+});
+</script>
