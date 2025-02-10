@@ -235,7 +235,7 @@ section {
 
     /* more space for big */
     transition: height 0.5s ease-in;
-    &:hover {
+    &:has(figure:hover) {
       height: calc(100% + 16em);
     }
   }
