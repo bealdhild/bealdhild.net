@@ -107,7 +107,7 @@ section {
   &>p {
     margin: 0 -1em;
   }
-  
+
   & span {
     user-select: text;
     color: white;
@@ -216,6 +216,27 @@ section {
     &>p {
       margin: 0 1em;
       font-size: 2.5em;
+    }
+  }
+  
+  #works {
+    display: block;
+
+    &>figure {
+      margin-bottom: 2em;
+      height: 4em;
+
+      transition: height 0.5s ease-in;
+
+      &:hover {
+        height: 20em;
+      }
+    }
+
+    /* more space for big */
+    transition: height 0.5s ease-in;
+    &:hover {
+      height: calc(100% + 16em);
     }
   }
   
