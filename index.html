@@ -119,17 +119,17 @@ document.querySelectorAll("figure").forEach((el) => {
             caption._itv = setInterval(() => {
                 if (iteration > 0) {
                     iteration = 0;
-                    solved += content[ch];
-                    ch++;
+                    solved += content.slice(ch, ch + 5).join("");
+                    ch += 5;
                 }
 
                 caption.textContent = randomString(content.slice(ch), solved);
-                if (ch === content.length) {
+                if (ch >= content.length) {
                     clearInterval(caption._itv);
                     el._solved = true;
                 }
                 iteration++;
-            }, 30);
+            }, 40);
         }
     });
 });
