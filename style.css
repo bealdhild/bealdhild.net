@@ -125,10 +125,10 @@ section {
 
 #works {
   background: white;
-  padding: calc(96px + 2em) 2em 0 2em;
+  padding: calc(96px + 2em) 2em;
+  height: fit-content;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 40%);
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   grid-gap: 2em;
   perspective: 3000px;
 
@@ -137,6 +137,7 @@ section {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
+    aspect-ratio: 1 / 1;
 
     &:hover img {
       transform: rotateY(180deg);
@@ -223,6 +224,7 @@ section {
     display: block;
 
     &>figure {
+      aspect-ratio: unset;
       margin-bottom: 2em;
       height: 4em;
 
@@ -231,12 +233,6 @@ section {
       &:hover {
         height: 20em;
       }
-    }
-
-    /* more space for big */
-    transition: height 0.5s ease-in;
-    &:has(figure:hover) {
-      height: calc(100% + 16em);
     }
   }
   
