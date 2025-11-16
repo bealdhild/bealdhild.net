@@ -194,8 +194,8 @@ section {
       padding: 0;
 
       #email:after { content: "...................."; }
-      #bsky:after { content: "................."; }
-      #discord:after { content: ".........................."; }
+      #bsky:after { content: "......................"; }
+      #discord:after { content: ".............................."; }
       #soundcloud:after { content: "......................."; }
       #kofi:after { content: "............................"; }
       #github:after { content: "............................"; }
