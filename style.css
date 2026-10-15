@@ -193,7 +193,7 @@ section {
       margin: 0;
       padding: 0;
 
-      #email:after { content: "............."; }
+      #email:after { content: "............"; }
       #bsky:after { content: "......................"; }
       #discord:after { content: ".............................."; }
       #soundcloud:after { content: "......................."; }
